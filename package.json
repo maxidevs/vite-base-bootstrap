@@ -1,0 +1,57 @@
+{
+  "name": "vite-base-bootstrap",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A base template project for React applications using Vite and Bootstrap for rapid development.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "css-compile": "sass --style compressed --source-map --embed-sources --no-error-css --load-path=node_modules ./src/assets/scss/bootstrap.scss:./src/assets/css/bootstrap.css",
+    "css-prefix": "postcss --replace ./src/assets/css/bootstrap.css --use autoprefixer --map",
+    "css": "npm-run-all css-compile css-prefix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxidevs/vite-base-bootstrap.git"
+  },
+  "keywords": [
+    "vite",
+    "react",
+    "bootstrap",
+    "template",
+    "base",
+    "sass",
+    "responsive"
+  ],
+  "author": "Maxidevs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maxidevs/vite-base-bootstrap/issues"
+  },
+  "homepage": "https://github.com/maxidevs/vite-base-bootstrap#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "eslint": "^9.13.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.14",
+    "globals": "^15.11.0",
+    "vite": "^5.4.10",
+    "sass": "1.77.6",
+    "postcss": "8.4.39",
+    "postcss-cli": "11.0.0",
+    "autoprefixer": "10.4.20",
+    "npm-run-all": "4.1.5"
+  }
+}
